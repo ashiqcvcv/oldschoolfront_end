@@ -1,0 +1,19 @@
+footer {
+    background: #222;
+    color: #aaa;
+  }
+  
+  footer a {
+    color: #aaa;
+  }
+  
+  footer .copyright {
+    padding: 15px 0;
+    background: #333;
+    font-size: 15px;
+    height: 100%;
+  }
+  
+  footer .copyright span {
+    color: #0894d1;
+  }

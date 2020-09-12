@@ -1,0 +1,21 @@
+.cont{
+    background : url('../../../assets/bg/bgmain.JPG');
+    background-size: cover;
+    width: 100%;
+}
+.contact{
+    color: white;
+    font-size: 40px;
+    border-bottom-style: solid;
+
+}
+
+.addres{
+    color: white;
+    font-size: larger;
+}
+.replay{
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}

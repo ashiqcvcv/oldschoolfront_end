@@ -1,0 +1,95 @@
+<div class="back">
+
+<!-- button for teach and learn -->
+<span class='learn'><a name="" id="" class="btn hrefLink" style="size: 20px;" href='https://docs.google.com/forms/d/e/1FAIpQLSccRSd7PYwI0NEzQtTEaKlkY-gkTny0z0QAKYEV_C35mR1JMQ/viewform' role="button">LEARN</a><i style="color : white;size: 20px;">|</i>
+  <a name="" id="" class="btn hrefLink" style="size: 20px;" href='https://docs.google.com/forms/d/e/1FAIpQLSedinG3u4DMlQshQIZUHu72Ol5bEDWx53rMCOHfiuy-VzmjUQ/viewform' role="button">TEACH</a>
+</span>
+<!-- Button trigger for login -->
+<button type="button" class="btn largebtn login" data-toggle="modal" data-target="#Login">
+  Login
+</button>
+<!-- Button trigger for signup -->
+<button type="button" class="btn largebtn signup" data-toggle="modal" data-target="#SignUp">
+  SignUp
+</button>
+
+<!-- Button trigger for teach -->
+
+
+<!-- button for contact and about -->
+<span class="contact"><a name="" id="" class="btn hrefLink" routerLink='/contact' role="button">contact</a><i style="color : white;">|</i>
+  <a name="" id="" class="btn hrefLink" routerLink='/about' role="button">about</a>
+</span>
+
+<!-- Modal -->
+<div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="text-center col-md-11"><h5 class="modal-title">LOGIN</h5></div>
+        <button type="button" class="close offset" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form [formGroup]='model' (submit)='onLogin()' class='align-items-center'>
+          <div class="modal-body">
+          <div class="form-group">
+            <select formControlName="type" class="form-control text-center" placeholder="Select Type Of User">
+              <option value="" disabled selected>Select your User Type</option>
+              <option value="student" class="form-control align-items-center" >Student</option>
+              <option value="tutor" class="form-control align-items-center">Tutor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="email" formControlName='email' class="form-control text-center" aria-describedby="emailHelp" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" formControlName='password' class="form-control text-center" placeholder="Password">
+          </div>
+      </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" >Login</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="text-center col-md-11"><h5 class="modal-title">SIGN UP</h5></div>
+        <button type="button" class="close offset" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form [formGroup]='signup' (submit)='onSignUp()' class='align-items-center'>
+          <div class="modal-body">
+            <div class="form-group">
+              <select formControlName="type" class="form-control" placeholder="Select Type Of User">
+                <option value="" disabled selected>Select your User Type</option>
+                <option value="student" class="form-control" >Student</option>
+                <option value="tutor" class="form-control">Tutor</option>
+              </select>
+            </div>
+          <div class="form-group">
+            <input type="text" formControlName='fullName' class="form-control text-center" aria-describedby="emailHelp" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="email" formControlName='email' class="form-control text-center" aria-describedby="emailHelp" placeholder="Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <input type="password" formControlName='password' class="form-control text-center" id="exampleInputPassword1" placeholder="Password">
+          </div>
+      </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">SignUp</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+</div>

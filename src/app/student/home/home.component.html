@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="card col-lg-4 col-md-6 col-sm-12" *ngFor='let Item of options' routerLink='{{Item.link}}'>
+            <div class="face face1">
+                <div class="content">
+                    <img src="../../../assets/img/classroom.jpg">
+                    <h3>{{Item.name}}</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>{{Item.des}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

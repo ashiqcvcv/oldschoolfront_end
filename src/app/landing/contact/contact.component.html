@@ -1,0 +1,35 @@
+<div class="cont fluid text-center">
+    <header class="contact">Contact Us</header>
+    <header class="addres">Old School TUTORS <br>
+        Kuttiadi, Kozhikode, Kerala <br>
+        oldschool2home@gmail.com <br>
+        Mob: 85473 1881</header>
+    <header class="replay">Please fill out the form below <br>
+        and we will contact you shortly:</header>
+
+        <form [formGroup]='sendmail' (submit)="sendMail()" class="align-items-center">
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <input type="text" formControlName='name' class="form-control text-center col-lg-4" placeholder="Name">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <input type="email" formControlName='email' class="form-control text-center col-lg-4" placeholder="Email">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <input type="text" formControlName='subject' class="form-control text-center col-lg-4" placeholder="Subject">
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <textarea  cols="30" rows="10" formControlName='message' class="form-control text-center col-lg-4" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4"></div>
+                <input type="tel" formControlName='mobno' class="form-control text-center col-lg-4" placeholder="Mobile No">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-success">
+            <input type="submit" value="Back" class="btn btn-primary" routerLink='/landing'>
+          </form>
+
+</div>

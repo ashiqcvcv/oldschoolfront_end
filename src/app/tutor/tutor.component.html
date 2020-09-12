@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark bg-dark nav-pills nav-justified">
+    <div *ngFor='let navItem of navItems'>
+      <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="{{navItem.link}}">{{navItem.name}}<i class="{{navItem.icon}}"></i></a>
+    </div>
+      <button type="button" class="btn btn-primary" (click)="onLogout()">
+          LogOut <i class="fas fa-long-arrow-alt-up    "></i>
+        </button>
+  </nav>
+  <router-outlet></router-outlet>
+  

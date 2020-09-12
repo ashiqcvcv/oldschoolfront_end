@@ -1,0 +1,23 @@
+.back {
+    background: url('../../../assets/bg/bgmain.JPG') no-repeat center center fixed;
+    background-size: cover;
+}
+.largetext{
+    color: white;
+    border-style: bold;
+    border-color: white;
+    border-radius: 0%;
+    border-width: 3px 0px 0px 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+.hrefLink{
+  color : white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+header{
+    font-size: 20px;
+}
