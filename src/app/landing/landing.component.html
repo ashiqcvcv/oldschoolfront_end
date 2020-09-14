@@ -5,11 +5,11 @@
   <a name="" id="" class="btn hrefLink" style="size: 20px;" href='https://docs.google.com/forms/d/e/1FAIpQLSedinG3u4DMlQshQIZUHu72Ol5bEDWx53rMCOHfiuy-VzmjUQ/viewform' role="button">TEACH</a>
 </span>
 <!-- Button trigger for login -->
-<button type="button" class="btn largebtn login" data-toggle="modal" data-target="#Login">
+<button type="button" class="btn largebtn login" data-toggle="modal" data-target="#Login" (click)='errorClear()'>
   Login
 </button>
 <!-- Button trigger for signup -->
-<button type="button" class="btn largebtn signup" data-toggle="modal" data-target="#SignUp">
+<button type="button" class="btn largebtn signup" data-toggle="modal" data-target="#SignUp" (click)='errorClear()'>
   SignUp
 </button>
 
@@ -51,6 +51,10 @@
         <button type="submit" class="btn btn-primary" >Login</button>
       </div>
     </form>
+    <!-- Error message -->
+    <div class="alert alert-warning" role="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
     </div>
   </div>
 </div>
@@ -89,6 +93,15 @@
         <button type="submit" class="btn btn-primary">SignUp</button>
       </div>
     </form>
+    <!-- Success message -->
+    <div class="alert alert-success" role="alert" *ngIf="showSucessMessage">
+      Saved successfully
+    </div>
+
+    <!-- Error message -->
+    <div class="alert alert-warning" role="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
     </div>
   </div>
 </div>

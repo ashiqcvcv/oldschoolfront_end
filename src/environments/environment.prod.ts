@@ -1,4 +1,4 @@
 export const environment = {
-  production: true
-  apiBaseUrl: 'http://localhost:3000'
+  production: true,
+  apiBaseUrl: 'https://oldschoolserver.herokuapp.com/'
 };

@@ -47,16 +47,16 @@ export class LandingComponent implements OnInit {
             this.router.navigateByUrl('/student');
           }else if(res['type']==='tutor'){
             this.router.navigateByUrl('/tutor');}
+          let body = document.querySelector('.modal-open');
+          body.classList.remove('modal-open');
+          body.removeAttribute('style');
+          let divFromHell = document.querySelector('.modal-backdrop');
+          body.removeChild(divFromHell);
         },
         err => {
           this.serverErrorMessages = err.error.message;
         }
       )
-      let body = document.querySelector('.modal-open');
-      body.classList.remove('modal-open');
-      body.removeAttribute('style');
-      let divFromHell = document.querySelector('.modal-backdrop');
-      body.removeChild(divFromHell);
     }
   }
 
@@ -71,11 +71,24 @@ export class LandingComponent implements OnInit {
   onSignUp(){
     this.authService.postUser(this.signup.value).subscribe(
       res=>{
+        this.serverErrorMessages = '';
         this.showSucessMessage = true;
         setTimeout(()=> this.showSucessMessage = false,4000);
         this.resetForm();
+      },err => {
+        if (err.status === 422) {
+        this.showSucessMessage = false;
+          this.serverErrorMessages = err.error.join('<br/>');
+        }
+        else
+          this.serverErrorMessages = 'Something went wrong.Please contact admin.';
       }
     )
+  }
+
+  errorClear(){
+    this.serverErrorMessages = '';
+    this.showSucessMessage = false;
   }
 
 
