@@ -54,6 +54,8 @@ const routes: Routes = [
   },
   {
     path : '', redirectTo : '/landing',pathMatch:'full'
+  },{
+    path : 'landing', redirectTo : '/landing',pathMatch:'full'
   }
 ];
 
